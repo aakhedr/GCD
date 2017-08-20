@@ -8,3 +8,12 @@ def naive_gcd(a, b):
 			best = d
 	return best
 
+def eucledian_gcd(a, b):
+	"""
+
+	"""
+	if b == 0:
+		return a
+	a_prime = a % b
+	return eucledian_gcd(b, a_prime)
+
