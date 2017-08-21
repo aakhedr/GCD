@@ -4,7 +4,7 @@ def naive_gcd(a, b):
 	Find greatest common divisor the easy naive way.	
 	"""
 	best = 0
-	for d in range(1, max([a, b])):
+	for d in range(1, min([a, b])):
 		if (a % d == 0) and (b % d == 0):
 			best = d
 	return best
