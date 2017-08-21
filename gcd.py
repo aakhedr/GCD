@@ -60,5 +60,5 @@ def stressTest():
 		else:
 			print("both functions were computed in equal times")
 		
-		if t != (len(as_and_bs) - 1):
+		if t is not (len(as_and_bs) - 1):
 			print("")
