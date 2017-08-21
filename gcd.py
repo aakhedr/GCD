@@ -58,6 +58,7 @@ def stressTest():
 			print("'eucledian_gcd' faster than 'naive_gcd'")
 		elif diff1 < diff2:
 			print("'naive_gcd' faster than 'eucledian_gcd'")
+			break
 		else:
 			print("both functions were computed in equal times")
 			break
