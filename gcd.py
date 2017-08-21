@@ -1,7 +1,7 @@
 def naive_gcd(a, b):
 	"""
 	a, b = Integers
-	Find greatest common divisor the easy naive way.	
+	Find greatest common divisor the easy way.	
 	"""
 	best = 0
 	for d in range(1, min([a, b])):
@@ -63,5 +63,5 @@ def stressTest():
 			print("both functions were computed in equal times")
 			break
 		
-		if t is not (len(as_and_bs) - 1):
+		if t is not (n - 1):
 			print("")
