@@ -30,14 +30,14 @@ def stressTest():
 	lower_bound = 0
 	upper_bound = 1000000
 
-	as_and_bs = []			# A list of a and b (tuples)
-	n = 10 					# Number of tests
+	as_and_bs = []	# A list of a and b (tuples)
+	n = 100 	# Number of tests
 	for i in range(n):
 		a = random.randrange(lower_bound, upper_bound)
 		b = random.randrange(lower_bound, upper_bound)
 		as_and_bs.append((a, b))
 	
-	for t in range(len(as_and_bs)):
+	for t in range(n):
 		t1 = time.time()
 		slow_gcd = naive_gcd(as_and_bs[t][0], as_and_bs[t][1])
 		t2 = time.time()
@@ -52,6 +52,7 @@ def stressTest():
 			print("GCD of:", str(as_and_bs[t]), "is equal by both functions:", fast_gcd)
 		else:
 			print("GCD of:", str(as_and_bs[t]), "is NOT equal by both functions.", "'slow_gcd'=", slow_gcd, "'fast_gcd'=", fast_gcd)
+			break
 		
 		if diff1 > diff2:
 			print("'eucledian_gcd' faster than 'naive_gcd'")
@@ -59,6 +60,7 @@ def stressTest():
 			print("'naive_gcd' faster than 'eucledian_gcd'")
 		else:
 			print("both functions were computed in equal times")
+			break
 		
 		if t is not (len(as_and_bs) - 1):
 			print("")
